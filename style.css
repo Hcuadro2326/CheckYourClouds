@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+ header {
+    display: block;
+    padding: 25px;
+    background: rgb(86, 150, 223);
+
+
+    transition: background-color 2s ease-out;
+  }
+  
+  header:hover {
+    background-color: rgb(193, 180, 56);
+    cursor: pointer;
+  }
+
+  header h1 {
+    size: 20px;
+    text-align: center;
+  }
+
+  body h2 {
+    padding-top: 50px;
+  }
+
+.search-button {
+    margin-top: 20px;
+    background-color: rgb(113, 158, 208);
+}
+
+  hr {
+    border:1px solid gray;
+  }
