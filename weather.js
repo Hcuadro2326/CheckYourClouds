@@ -1,5 +1,5 @@
-const url = 'https://api.openweathermap.org';
-const APIKey = '6d2634cf057189dfbdc49782f75750f9';
+// const url = 'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={818a74417384dcdcda67ec49319e6bd4}';
+const APIKey = '818a74417384dcdcda67ec49319e6bd4';
 
 
 
@@ -17,10 +17,16 @@ const APIKey = '6d2634cf057189dfbdc49782f75750f9';
 // getIt();
 
 
+const nameEl = document.getElementById('nameEl');
+const currentTime = document.getElementById('currentTime');
+
+
 function currentWeather(search) {
-    let requestURL = "https://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=" + APIKey;
-    console.log(requestURL);
-    fetch(requestURL)
+    //let url = "https://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=" + APIKey;
+    let url = `https://api.openweathermap.org/data/2.5/forecast?appid=${APIKey}&q=${search}`
+
+    console.log(url);
+    fetch(url)
         .then(function (response) {
             if(response.ok){
                 return response.json();
@@ -31,8 +37,8 @@ function currentWeather(search) {
         .then(function (data) {
             // let weatherData = data
             console.log(data);
-            nameEl.innerHTML = data.name;
-            currentTime.innerHTML = now;
+            nameEl.innerHTML = data.city.name;
+            currentTime.innerHTML = new Date();
             let weatherIcon = data.weather[0].icon;
             console.log(weatherIcon);
             let focusImg = currentIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png");
@@ -98,4 +104,8 @@ function currentWeather(search) {
         });
 
 }
-currentWeather();
+
+$(document).on('click', '#search-button', () => {
+    let x = $('#search-input').val();
+    currentWeather(x);
+})
