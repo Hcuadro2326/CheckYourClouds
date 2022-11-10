@@ -34,3 +34,8 @@
   hr {
     border:1px solid gray;
   }
+
+.container {
+  display: flex;
+  padding: 200px;
+}

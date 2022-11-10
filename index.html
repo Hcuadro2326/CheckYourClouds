@@ -17,13 +17,13 @@
 <body>
     <div>
         <h2>Search for a City:</h2>
-    <div>
+    </div>
         <form id="search-form">
             <div>
                 <input
                 class="form-input"
                 id="search-input"
-                placeholder="El Paso"
+                placeholder="Pick a City"
                 />
                 <div>
                     <button type="submit" class="search-button" id="search-button">Search</button>
@@ -31,11 +31,18 @@
             </div>
             <hr>
         </form>
-    </div>
-    </div>
 
-   <div id="nameEl"></div>
-   <div id="currentTime"></div>
+
+<section class="fiveday">
+    <div id="currentCity"></div>
+    <div id="currentTime"></div>
+    <div id="currentIcon"></div>
+    <div id="currentTemp"></div>
+    <div id="currentWind"></div>
+    <div id="currentHumidity"></div>
+    <div id="currentUV"></div>
+</section>
+
 
    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="./weather.js"></script>
