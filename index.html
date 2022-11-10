@@ -4,47 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/4d70f3ad75.js" crossorigin="anonymous"></script>
-    <!--css>-->
-    <link rel='stylesheet' type='text/css' href='./style.css'>
     <title>Check Your Clouds</title>
 </head>
-
-<header>
-    <h1>Weather Dashboard</h1>
-</header>
 <body>
-    <div>
-        <h2>Search for a City:</h2>
-    </div>
-        <form id="search-form">
-            <div>
-                <input
-                class="form-input"
-                id="search-input"
-                placeholder="Pick a City"
-                />
-                <div>
-                    <button type="submit" class="search-button" id="search-button">Search</button>
-                </div>
-            </div>
-            <hr>
-        </form>
+    <header>
+        <h1>Check Your Clouds</h1>
+    </header>
 
+    <section>
+        <label for="search-input">Search for a city:</label>
+        <input type="text" name="search-input" id="search-input">
+        <button type="submit" id="search-button">Search Weather</button>
+    </section>
 
-<section class="fiveday">
-    <div id="currentCity"></div>
-    <div id="currentTime"></div>
-    <div id="currentIcon"></div>
-    <div id="currentTemp"></div>
-    <div id="currentWind"></div>
-    <div id="currentHumidity"></div>
-    <div id="currentUV"></div>
-</section>
+    <section>
+        <div>Current City <span id="currentCity"></span></div>
+        <div>Current Time <span id="currentTime"></span></div>
+        <div>Current Icon <img id="currentIcon" /></div>
+        <div>Current Temp <span id="currentTemp"></span></div>
+        <div>Current Wind <span id="currentWind"></span></div>
+        <div>Current Humidity <span id="currentHumidity"></span></div>
+        <div>Current <span id="currentUV"></span></div>
+    </section>
 
-
-   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <section>
+        <div class="fiveday"></div>
+        <div class="fiveday"></div>
+        <div class="fiveday"></div>
+        <div class="fiveday"></div>
+        <div class="fiveday"></div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="./weather.js"></script>
 </body>
 </html>

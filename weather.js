@@ -1,4 +1,4 @@
-const APIkey = "818a74417384dcdcda67ec49319e6bd4";
+const APIKey = "818a74417384dcdcda67ec49319e6bd4";
 
 $(document).on("click", "#search-button", () => {
     let x = $("#search-input").val();
